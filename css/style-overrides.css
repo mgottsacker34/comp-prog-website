@@ -17,6 +17,10 @@ footer p {
   margin: 0;
 }
 
+.top-section {
+  margin-top: 5em;
+}
+
 .content-section {
   padding: 25px;
 }
