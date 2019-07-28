@@ -1,0 +1,15 @@
+Welcome to Computer Programming!
+
+This is an introductory programming class. I will teach this class as though none of you have any computer programming experience, although that is likely not the case for everyone. Irrespective of your background, you should expect to gain a firm foundation in programming concepts from this class.
+
+My formal background in Computer Science begins with MUHS. My first programming class was with HTML/CSS and a little JavaScript, and it worked quite differently from this one. Learning how to throw together a webpage is quite different from learning the fundamentals of computer programming. I took AP Computer Science the following year. The course had not run for several years before that. My class had eight people in it. I liked it a lot, learned a lot, and went on to study Computer Science at Saint Louis University. I learned a lot there as well. I worked in technical internships every summer of my college career.
+
+From those experiences, I know that this school's curriculum prepares you well for a technology field in college and in the professional world.
+
+I will do my best to teach the lessons I have learned from each of these stages. I will teach the basics of Java programming, but I will also teach things I believe to be fundamental to programming professionally. Some of these things are:
+
+- collaborative work
+- innovative problem solving
+- creative design
+- interdisciplinary nature
+- ethical considerations

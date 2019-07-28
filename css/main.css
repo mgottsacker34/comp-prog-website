@@ -1,16 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
-.navbar {
-  margin-bottom: 5em; }
-
-h1 {
-  margin-top: 5rem; }
-
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono:300,400,700");
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 :root {
   --blue: #DF691A;
   --indigo: #6610f2;
@@ -38,8 +34,8 @@ h1 {
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  --font-family-sans-serif: "Ubuntu";
+  --font-family-monospace: "Ubuntu Mono"; }
 
 *,
 *::before,
@@ -57,7 +53,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Ubuntu";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -157,7 +153,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Ubuntu Mono";
   font-size: 1em; }
 
 pre {
@@ -306,6 +302,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
+  font-family: "Ubuntu Mono";
   font-weight: 500;
   line-height: 1.2; }
 
@@ -4189,7 +4186,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4274,7 +4271,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7350,7 +7347,7 @@ button.bg-dark:focus {
   .mx-xl-auto {
     margin-left: auto !important; } }
 .text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; }
+  font-family: "Ubuntu Mono" !important; }
 
 .text-justify {
   text-align: justify !important; }
