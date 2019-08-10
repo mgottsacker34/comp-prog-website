@@ -1,3 +1,6 @@
 .sass-cache
 scss
 themes
+private
+DS_Store
+._.DS_Store

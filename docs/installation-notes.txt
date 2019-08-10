@@ -1,0 +1,15 @@
+Windows
+
+Get OpenJDK 12 from Red Hat.
+Link: https://developers.redhat.com/products/openjdk/download
+    1. Scroll down to second option in list (MSI installer).
+    2. Create account.
+    3. Download. If download does not proceed automatically, click the link they give. You might need to scroll down a bit.
+    4. Run installer. 
+        - On Custom Setup step, click the icon next to OpenJDK Runtime and select "Entire feature will be installed on local hard drive".
+
+Get Geany.
+Link: https://www.geany.org/download/releases/
+    1. Select Windows version (File).
+    2. Run installer. You can use all defaults.
+    
