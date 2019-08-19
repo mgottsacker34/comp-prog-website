@@ -1,0 +1,10 @@
+1. Create duplicate of lecture slideshow and save as LECTURENAME_print.html
+2. Change reveal.js theme to use white-mg.css.
+3. Visit /html/lectures/LECTURENAME_print.html?print-pdf#/
+4. Print w/ margin set to 0 and Background graphics option checked.
+5. Save as PDF.
+6. Open .pdf file in Adobe Acrobat DC Pro.
+7. Convert to .ppt.
+8. Open in PowerPoint. 
+9. Print with lines for notes.
+10. Export as PDF and save to proper web directory.
