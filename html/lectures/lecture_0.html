@@ -331,6 +331,7 @@ public class Lecture_0 {
 							Install JDK and Geany via the links I share with you.
 						</li>
 					</ul>
+					<br><br>
 					<h2>
 						By Friday, 08.23.19:
 					</h2>
@@ -355,16 +356,24 @@ public class Lecture_0 {
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+				transition: 'none',
+				center: true,
+				menu: {
+					themes: [
+						{ name: 'Black', theme: '../../lib/reveal.js/css/theme/black-mg.css' },
+						{ name: 'White', theme: '../../lib/reveal.js/css/theme/white-mg.css' }
+					]
+				},
+
 				dependencies: [
 					{ src: '../../lib/reveal.js/plugin/markdown/marked.js' },
 					{ src: '../../lib/reveal.js/plugin/markdown/markdown.js' },
 					{ src: '../../lib/reveal.js/plugin/notes/notes.js', async: true },
-					{ src: '../../lib/reveal.js/plugin/highlight/highlight.js', async: true }
-				],
-				hash: true,
-				slideNumber: true,
-				transition: 'none',
-				center: true
+					{ src: '../../lib/reveal.js/plugin/highlight/highlight.js', async: true },
+					{ src: '../../lib/reveal.js/plugin/reveal.js-menu-master/menu.js', async: true }
+				]
 			});
 		</script>
 	</body>

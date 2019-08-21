@@ -311,7 +311,7 @@ public class Lecture_1_1 {
 					</ul>
 				</section>
 
-				<section>
+				<section data-menu-title="IDE Choice">
 					<h2>
 						I recommend using Geany, NOT Eclipse or Netbeans
 					</h2>
@@ -361,17 +361,26 @@ public class Lecture_1_1 {
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+				transition: 'none',
+				center: true,
+				pdfSeparateFragments: false,
+
+				menu: {
+					themes: [
+						{ name: 'Black', theme: '../../lib/reveal.js/css/theme/black-mg.css' },
+						{ name: 'White', theme: '../../lib/reveal.js/css/theme/white-mg.css' }
+					]
+				},
+
 				dependencies: [
 					{ src: '../../lib/reveal.js/plugin/markdown/marked.js' },
 					{ src: '../../lib/reveal.js/plugin/markdown/markdown.js' },
 					{ src: '../../lib/reveal.js/plugin/notes/notes.js', async: true },
-					{ src: '../../lib/reveal.js/plugin/highlight/highlight.js', async: true }
-				],
-				hash: true,
-				slideNumber: true,
-				transition: 'fade',
-				center: true,
-				pdfSeparateFragments: false
+					{ src: '../../lib/reveal.js/plugin/highlight/highlight.js', async: true },
+					{ src: '../../lib/reveal.js/plugin/reveal.js-menu-master/menu.js', async: true }
+				]
 			});
 		</script>
 	</body>
