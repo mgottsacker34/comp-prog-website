@@ -9712,6 +9712,11 @@ padding-left: 5%;
   margin-top: 3em;
 }
 
+.console-input {
+  font-weight: 700;
+  color: chartreuse;
+}
+
 .navbar {
   font-size: 0.875rem;
 }
