@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>comp prog/lecture_2_1</title>
+
+		<link rel="stylesheet" href="../../lib/reveal.js/css/reset.css">
+		<link rel="stylesheet" href="../../lib/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../lib/reveal.js/css/theme/black-mg.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../lib/reveal.js/lib/css/monokai.css">
+
+		<!-- Override CSS -->
+		<link rel="stylesheet" href="../../css/revealjs-overrides.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../lib/reveal.js/css/print/pdf.css' : '../../lib/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section class="title-slide">
+					<div class="title-main">
+						<h4>
+							lecture_2_1:
+						</h4>
+						<h1>
+							Elementary Programming: variables
+						</h1>
+					</div>
+
+					<div class="title-info">
+						<p>
+							comp-prog/lecture_2_1
+							<br>
+							Matt Gottsacker
+							<br>
+							Marquette University High School
+							<br>
+							Last modified: 08.28.2019
+						</p>
+					</div>
+                </section>
+
+                <section>
+                    <h2>
+                        Programming as problem solving
+                    </h2>
+                    <p>
+                        So far, we have used Java to print things out. We have used it for some calculations, but nothing we can't do on a calculator. Now, we will start learning concepts that will enable us to formulate problems as programming problems. 
+                    </p>
+                </section>
+
+                <section>
+                    <h2>
+                        Programming as problem solving
+                    </h2>
+                    <h4 class="fragment">
+                        What is an <span class="code-ex">algorithm</span>?
+                    </h4>
+                    <p class="fragment">
+                        "An <span class="code-ex">algorithm</span> describes how a problem is solved by listing the actions that need to be taken and the order of their execution."
+                        <br><br>
+                        It is a set of instructions to help plan a program.
+                        <br><br>
+                        It is a recipe.
+                    </p>
+                </section>
+                
+                <section>
+                    <h2>
+                        Variables
+                    </h2>
+                    <pre><code class="java hljs">
+int week = 1;
+
+double profit = 736.0;
+                    </code></pre>
+                        <br>
+                        <p>
+                            <ul>
+                                <li class="fragment">Variables hold information and correspond to memory locations.</li>
+                                <li class="fragment">The information they hold can change...usually</li>
+                                <li class="fragment">Each variable has a:
+                                    <ul>
+                                        <li class="fragment">type</li>
+                                        <li class="fragment">size</li>
+                                        <li class="fragment">name</li>
+                                        <li class="fragment">value</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                    </p>
+                </section>
+
+                
+                <section>
+                    <h2>
+                        Variables: type and size
+                    </h2>
+                    <p>
+                        Java variables can be of the following types and sizes:
+                        <table class="mono">
+                                <thead>
+                                    <th>type</th>
+                                    <th>size (bits)</th>
+                                </thead>
+                                <tr>
+                                    <td>byte</td>
+                                    <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>short</td>
+                                <td>16</td>
+                            </tr>
+                            <tr class="emphasis">
+                                    <td>int</td>
+                                    <td>32</td>
+                                </tr>
+                                <tr>
+                                <td>long</td>
+                                <td>64</td>
+                            </tr>
+                            <tr>
+                                <td>float</td>
+                                <td>32</td>
+                            </tr>
+                            <tr class="emphasis">
+                                    <td>double</td>
+                                    <td>64</td>
+                                </tr>
+                        </table>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>
+                        Variables: names
+                    </h2>
+                    <ul>
+                        <li class="fragment">Use descriptive variable names. Long names are okay.</li>
+                        <li class="fragment">Lowercase variable names, unless more than one word. Then, combine all words into one, and capitalize the first letter of each subsequent word. For example:
+                            <ul>
+                                <li class="fragment code-ex">camelCasedVariableName</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>
+                        Variables: values
+                    </h2>
+                    <p>
+                        Once it is declared, the value of a variable can change...
+                        <pre><code class="java hljs">
+int week;
+
+week = 1;
+week = 2;
+                        </code></pre>
+                    </p>
+                </section>
+                
+                <section>
+                    <h2>
+                        Variables: values
+                    </h2>
+                    <p>
+                        ...unless it is a constant.
+                        <pre><code class="java hljs">
+final int MAX_WEEKS = 5;
+                        </code></pre>
+                    </p>
+                    <br>
+                    <p class="fragment">
+                        Constants also have different naming conventions.
+                        <ul class="fragment">
+                            <li>Prefaced with <span class="code-ex">final</span> keyword.</li>
+                            <li>All caps.</li>
+                            <li>Underscores between words.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h1>end<span id="underscore">_</span></h1>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="../../lib/reveal.js/js/reveal.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="../../js/main.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../../lib/reveal.js/plugin/markdown/marked.js' },
+					{ src: '../../lib/reveal.js/plugin/markdown/markdown.js' },
+					{ src: '../../lib/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: '../../lib/reveal.js/plugin/highlight/highlight.js', async: true }
+				],
+				hash: true,
+				slideNumber: true,
+				transition: 'none',
+                center: true,
+                pdfSeparateFragments: false
+			});
+		</script>
+	</body>
+</html>

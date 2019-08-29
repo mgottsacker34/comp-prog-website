@@ -8,5 +8,19 @@
 }
 
 code {
-  font-size: 20px;
+  font-size: 24px;
+}
+
+.code-ex {
+    font-family: 'Ubuntu Mono';
+    color: #f92672;
+}
+
+.mono {
+    font-family: 'Ubuntu Mono';
+}
+
+.emphasis {
+    color: chartreuse;
+    font-weight: 500;
 }
