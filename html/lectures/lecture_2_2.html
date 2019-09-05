@@ -76,9 +76,89 @@
                         1. Requirements specification
                     </h2>
                     <ul>
-                        <li class="fragment">Understand and dictate what &nbsp;<span class="code-ex"><b>problem</b></span>&nbsp;  the software will solve.</li>
+                        <li class="fragment">Understand and dictate what &nbsp;<span class="code-ex"><b>problem</b></span>&nbsp; the software will solve.</li>
                         <li class="fragment">The textbook states problems clearly. In the wild, problems are not always clearly defined, so developers need to interact with stakeholders frequently.</li>
                     </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        2. System analysis
+                    </h2>
+                    <ul>
+                        <li class="fragment">Based on requirements specification, determine outputs of the software.</li>
+                        <li class="fragment">Determine how to reach the outputs.</li>
+                        <li class="fragment">Determine what the program's inputs are.</li>
+                        <li class="fragment">System analysis involves constructing/enumerating any formulas required.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        3. System design
+                    </h2>
+                    <ul>
+                        <li class="fragment">Describe the algorithm being used.</li>
+                        <li class="fragment">Break down the problem into components that are solved by subsystems.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        4. Implementation / development
+                    </h2>
+                    <ul>
+                        <li class="fragment">Write code. Create the program.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        5. Testing
+                    </h2>
+                    <ul>
+                        <li class="fragment">Check that the code meets requirements and does not have any bugs / mistakes.</li>
+                        <li class="fragment">How do you know it works?</li>
+                        <li class="fragment">For your group projects, I will require you to describe test cases that you use. For example, you may test it using simple values, or check complex calculations with a calculator.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        6. Deployment
+                    </h2>
+                    <ul>
+                        <li class="fragment">Release the software for install, or host it on a website.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        7. Maintenance 
+                    </h2>
+                    <ul>
+                        <li class="fragment">Security updates</li>
+                        <li class="fragment">Feature improvements</li>
+                        <li class="fragment">Fix bugs</li>
+                        <li class="fragment">Incorporate changing requirements</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        Waterfall vs. Agile
+                    </h2>
+                    <ul>
+                        <li class="fragment">Waterfall development is effective for small projects with clear requirements.</li>
+                        <li class="fragment">For many development teams, the software to build has changing requirements that are not clear at the project's inception. These teams are often cross-functional and smaller. They use the Agile development methodology.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        Waterfall vs. Agile
+                    </h2>
+                    <img src="../../assets/img/waterfallvsagile.jpg" />
                 </section>
 
 				<section>
@@ -101,8 +181,15 @@
 					{ src: '../../lib/reveal.js/plugin/markdown/marked.js' },
 					{ src: '../../lib/reveal.js/plugin/markdown/markdown.js' },
 					{ src: '../../lib/reveal.js/plugin/notes/notes.js', async: true },
-					{ src: '../../lib/reveal.js/plugin/highlight/highlight.js', async: true }
-				],
+                    { src: '../../lib/reveal.js/plugin/highlight/highlight.js', async: true },
+                    { src: '../../lib/reveal.js/plugin/reveal.js-menu-master/menu.js', async: true }
+                ],
+                menu: {
+					themes: [
+						{ name: 'Black', theme: '../../lib/reveal.js/css/theme/black-mg.css' },
+						{ name: 'White', theme: '../../lib/reveal.js/css/theme/white-mg.css' }
+					]
+				},
 				hash: true,
 				slideNumber: true,
 				transition: 'none',

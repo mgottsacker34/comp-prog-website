@@ -72,8 +72,15 @@
 					{ src: '../../lib/reveal.js/plugin/markdown/marked.js' },
 					{ src: '../../lib/reveal.js/plugin/markdown/markdown.js' },
 					{ src: '../../lib/reveal.js/plugin/notes/notes.js', async: true },
-					{ src: '../../lib/reveal.js/plugin/highlight/highlight.js', async: true }
-				],
+                    { src: '../../lib/reveal.js/plugin/highlight/highlight.js', async: true },
+                    { src: '../../lib/reveal.js/plugin/reveal.js-menu-master/menu.js', async: true }
+                ],
+                menu: {
+					themes: [
+						{ name: 'Black', theme: '../../lib/reveal.js/css/theme/black-mg.css' },
+						{ name: 'White', theme: '../../lib/reveal.js/css/theme/white-mg.css' }
+					]
+				},
 				hash: true,
 				slideNumber: true,
 				transition: 'none',
