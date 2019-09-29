@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="Marquette University High School,MUHS,Programming,Java,Gottsacker,Matt,Matthew">
+    <meta name="author" content="Matt Gottsacker">
+    
+    <title>comp prog/ch-4-notes</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"> -->
+
+    <link rel="stylesheet" href="../lib/highlight.js/styles/a11y-dark.css">
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <!-- <link rel="stylesheet" href="../lib/reveal.js/lib/css/monokai.css"> -->
+    
+    <!-- Custom assignment styling -->
+    <link rel="stylesheet" href="../../css/assignment-style.css">
+    
+</head>
+
+<style>
+    b>code {
+        color: black;
+    }
+</style>
+
+<body>
+    <section class="content-section top-section">
+        <div class="container">
+            <h1>Chapter 4 concepts and methods</h1>
+            <p>
+                Mr. Gottsacker <br>
+                Computer Programming <br>
+            </p>
+
+            <hr>
+
+            <h2>
+                Contents
+            </h2>
+            <ol>
+                <li>
+                    <a href="#math-methods">Mathematical methods</a>
+                    <ol type="a">
+                        <li><a href="#trig-methods">Trigonometric methods</a></li>
+                        <li><a href="#exp-methods">Exponent methods</a></li>
+                        <li><a href="#rounding-methods">Rounding methods</a></li>
+                        <li><a href="#num-methods">Other number methods</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#char-type">Character data type</a>
+                    <ol type="a">
+                        <li><a href="#char-special">Special characters</a></li>
+                        <li><a href="#char-compare">Comparing characters</a></li>
+                        <li><a href="#char-methods">Character methods</a></li>
+                    </ol>
+                </li>
+            </ol>
+
+            <hr>
+
+            <h2>
+                Methods
+            </h2>
+            <p>
+                Methods contain groups of statements that perform a specific task. They make your life easier by providing an interface into common functionality. This chapter is an introduction to methods because you will use a handful of built-in methods. Eventually (in chapter 6), you will write your own methods.
+            </p>
+            <p>
+                <b>Static methods</b> can be invoked without using an object. They are not tied to an object instance. The syntax is <code>ClassName.methodName(arguments)</code>. 
+                <br><br>
+                <b>Instance methods</b> must be invoked from a specific object instance.
+            </p>
+
+            <hr>
+
+            <h2 id="math-methods">
+                Mathematical methods
+            </h2>
+            <p>
+                These methods are all <b>static methods</b>. They belong to the <code>Math</code> class, so they should be prefixed with <code>Math</code> when using them in programs.
+            </p>
+            <p>
+                <code>Math.PI</code> is an object of the <code>Math</code> class, not a method. It holds the <code>double</code> value that is closest to the actual value of pi.
+            </p>
+
+            <h4 id="trig-methods">
+                Trigonometric methods
+            </h4>
+
+            <ul>
+                <li>
+                    <b><code>toRadians(angleInDegrees)</code></b>: Returns the angle, converted to radians.
+                </li>
+                <br>
+                <pre><code class="java">
+Math.toRadians(30) &#9; // returns 0.5236 (same as pi/6)
+                </code></pre>
+
+                <li>
+                    <b><code>toDegrees(angleInRadians)</code></b>: Returns the angle, converted to degrees.
+                </li>
+                <br>
+                <pre><code class="java">
+Math.toDegrees(Math.PI / 2) &#9; // returns 90.0
+                </code></pre>
+
+                <li>
+                    <b><code>sin(angleInRadians)</code></b>: Returns the trigonometric sine of an angle in radians.
+                </li>
+                <br>
+                <pre><code class="java">
+Math.sin(Math.PI / 2) &#9;&#9; // returns 1.0
+Math.sin(Math.toRadians(270)) &#9; // returns -1.0
+Math.sin(Math.PI / 6) &#9;&#9; // returns 0.5
+                </code></pre>
+
+                <li>
+                    <b><code>cos(angleInRadians)</code></b>: Returns the trigonometric cosine of an angle in radians.
+                </li>
+                <br>
+                <pre><code class="java">
+Math.cos(0) &#9; &#9; &#9; // returns 1.0
+Math.cos(Math.toRadians(30)) &#9; // returns 0.866
+Math.cos(Math.PI / 2) &#9; &#9; // returns 0
+                </code></pre>
+
+                <li>
+                    <b><code>tan(angleInRadians)</code></b>: Returns the trigonometric tangent of an angle in radians.
+                </li>
+                <br>
+                <pre><code class="java">
+Math.tan(Math.PI / 4) &#9; // returns 1.0
+                </code></pre>
+
+                <li>
+                    <b><code>asin(angleInRadians)</code></b>, <b><code>acos(angleInRadians)</code></b>, <b><code>atan(angleInRadians)</code></b>: Return the inverted trigonometric sine, cosine, tangent (respectively) of an angle.
+                </li>
+            </ul>
+
+            <h4 id="exp-methods">
+                Exponent Methods
+            </h4>
+            <ul>
+                <li>
+                    <b><code>pow(a, b)</code></b>: Returns <b><code>a</code></b> raised to the power of <b><code>b</code></b>.
+                </li>
+                <li>
+                    <b><code>sqrt(x)</code></b>: Returns the square root of <b><code>x</code></b>.
+                </li>
+                <li>
+                    <b><code>log(x)</code></b>: Returns the natural logarithm of <b><code>x</code></b>.
+                </li>
+                <li>
+                    <b><code>log10(x)</code></b>: Returns the base 10 logarithm of <b><code>x</code></b>.
+                </li>
+                <li>
+                    <b><code>exp(x)</code></b>: Returns e raised to the power of <b><code>x</code></b> (e^x).
+                </li>
+            </ul>
+
+            <h4 id="rounding-methods">
+                Rounding methods
+            </h4>
+            <ul>
+                <li>
+                    <b><code>ceil(x)</code></b>: Rounds <b><code>x</code></b> up to its nearest integer. The return type is a <code>double</code>.
+                </li>
+                <br>
+                <pre><code class="java">
+                Math.ceil(2.1) &#9; &#9; // returns 3.0
+                Math.ceil(2.0) &#9; &#9; // returns 2.0
+                Math.ceil(-2.0) &#9; // returns -2.0
+                Math.ceil(-2.1) &#9; // returns -2.0
+                </code></pre>
+                
+                <li>
+                    <b><code>floor(x)</code></b>: Rounds <b><code>x</code></b> down to its nearest integer. The return type is a <code>double</code>.
+                </li>
+                <br>
+                <pre><code class="java">
+                Math.floor(2.1) &#9; // returns 2.0
+                Math.floor(2.0) &#9; // returns 2.0
+                Math.floor(-2.1) &#9; // returns -3.0
+                Math.floor(-2.0) &#9; // returns -2.0
+                </code></pre>
+                
+                <li>
+                    <b><code>rint(x)</code></b>: Round <b><code>x</code></b> to its nearest integer, maintaining its current type. If x is equidistant from two integers, the even one is returned (see <b>**interesting case</b> below).
+                </li>
+                <br>
+                <pre><code class="java">
+Math.rint(2.1) &#9; &#9; // returns 2.0
+Math.rint(-2.1) &#9; // returns -2.0
+Math.rint(2.5) &#9; &#9; // returns 2.0 &#9; <b>**interesting case</b>
+Math.rint(-2.5) &#9; // returns -2.0
+                </code></pre>
+
+                <li>
+                    <b><code>round(x)</code></b>: Returns <code>(int) Math.floor(x + 0.5)</code> if <b><code>x</code></b> is a <code>float</code>, and <code>(long) Math.floor(x + 0.5)</code> if <b><code>x</code></b> is a <code>double</code>.
+                </li>
+                <br>
+                <pre><code class="java">
+Math.round(2.5) &#9; // returns 3
+Math.round(2.0) &#9; // returns 2
+Math.round(-2.4) &#9; // returns -2
+                </code></pre>
+
+            </ul>
+
+            <h4 id="num-methods">
+                Minimum, maximum, absolute value, random numbers
+            </h4>
+
+            <ul>
+                <li>
+                    <b><code>max(a, b)</code></b>: Returns the greater number out of <b><code>a</code></b> and <b><code>b</code></b>.
+                </li>
+                <br>
+                <pre><code class="java">
+Math.max(2, 3) &#9; &#9; // returns 3
+Math.max(2.5, 3) &#9; // returns 3.0
+                </code></pre>
+
+                <li>
+                    <b><code>min(a, b)</code></b>: Returns the lesser number out of <b><code>a</code></b> and <b><code>b</code></b>.
+                </li>
+                <br>
+                <pre><code class="java">
+Math.min(2.5, 3) &#9; // returns 2.5
+                </code></pre>
+
+                <li>
+                    <b><code>abs(x)</code></b>: Returns the absolute value of <b><code>x</code></b>.
+                </li>
+
+                <li>
+                    <b><code>random()</code></b>: Returns a random <code>double</code> greater than or equal to 0 and less than 1.0. 
+                </li>
+                <br>
+                <pre><code class="java">
+(int) (Math.random() * 10) &#9; &#9; // returns a random integer between 0 and 9
+(int) (Math.random() * 100) + 1 &#9; // returns a random integer between 1 and 100
+                </code></pre>
+            </ul>
+
+            <br>
+
+            <hr>
+
+            <br>
+
+            <h2 id="char-type">
+                Character data type and methods
+            </h2>
+            <p>
+                You have printed text using <code>System.out.print()</code> with a message in double quotes. These text entries are made up of characters. In Java, each character in a string of text is of the <code>char</code> data type. When using the <code>char</code> type, single quotes are used. For example:
+                <pre><code class="java">
+char letter = 'a';
+                </code></pre>
+            </p>
+
+            <br>
+
+            <h4 id="char-special">
+                Special characters
+            </h4>
+            <p>
+                There are special characters in Java for representing things like whitespace and quotation marks. Unlike traditional letter and number characters, they are represented with two physical keystrokes. They are always prefixed with a backslash. These are the ones you may commonly use:
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Escape sequence</th>
+                        <th scope="col">Character name</th>
+                        <th scope="col">Example code</th>
+                        <th scope="col">Example output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>\t</code></td>
+                        <td>tab</td>
+                        <td><pre><code class="java">System.out.print("1 \t 2 \t 3");</code></pre></td>
+                        <td><pre><code>1 &#9; 2 &#9; 3</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td><code>\n</code></td>
+                        <td>newline</td>
+                        <td><pre><code class="java">System.out.print("This is a long message \n More of the long message.");</code></pre></td>
+                        <td><pre><code class="plaintext">This is a long message<br>More of the long message</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td><code>\"</code></td>
+                        <td>quotation mark</td>
+                        <td><pre><code class="java">System.out.print("He said, \"Mr. Gottsacker is a 10X coder.\"");</code></pre></td>
+                        <td><pre><code class="plaintext">He said, "Mr. Gottsacker is a 10X coder."</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td><code>\\</code></td>
+                        <td>backslash</td>
+                        <td><pre><code class="java">System.out.print("\\t is a tab character.");</code></pre></td>
+                        <td><pre><code class="plaintext">\t is a tab character.</code></pre></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 id="char-compare">
+                Comparing and testing characters
+            </h4>
+            <p>
+                A <code>char</code> can be cast to an <code>int</code>, and vice versa. This is because computers store and process characters according to an encoding scheme. Recall that at their lowest level, computers process all information as 0s and 1s. Encoding schemes are responsible for mapping textual characters to binary numbers. We can use the more comprehensible decimal representation of these binary numbers to more quickly understand how this works.
+            </p>
+            <p>
+                Java supports the <b>Unicode</b> encoding scheme, which includes the ASCII code for representing common American characters. When you cast a <code>char</code> to an <code>int</code>, you get its ASCII decimal value. Some commonly used characters and their ASCII decimal mappings are included below.
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Characters</th>
+                        <th>Decimal code value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>'0'</code> to <code>'9'</code></td>
+                        <td>48 to 57</td>
+                    </tr>
+                    <tr>
+                        <td><code>'A'</code> to <code>'Z'</code></td>
+                        <td>65 to 90</td>
+                    </tr>
+                    <tr>
+                        <td><code>'a'</code> to <code>'z'</code></td>
+                        <td>97 to 122</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h5>
+                Example of <code>char</code> decimal representation
+            </h5>
+            <pre><code class="java">
+char letter = 'A';
+System.out.println(letter); &#9; &#9; // prints A 
+char decimalLetter = (int) letter;
+System.out.println(decimalLetter); &#9; // prints 65
+            </code></pre>
+
+            <p>
+                Because the ASCII encoding maps characters alphabetically, you can compare characters like you compare numbers. <b>Note</b> that capital letters come before lowercase letters. Consider the following boolean comparisons:
+            </p>
+
+            <pre><code class="java">
+boolean chComp = 'a' < 'b'; &#9; // true. ASCII for 'a' (97) is less than the ASCII for 'b' (98).
+boolean chComp = 'b' < 'B'; &#9; // false. ASCII for 'b' (98) is greater than the ASCII for 'B' (66).
+boolean chComp = '1' < '7'; &#9; // true. ASCII for '1' (49) is less than the ASCII for '7' (55).
+            </code></pre>
+
+            <p>
+                You may need to check what kind of character you have in a program. You can leverage the decimal representations discussed above to perform this check. The following code snippet is a way to accomplish this, assuming the variable <code>ch</code> stores a character:
+            </p>
+            <pre><code class="java">
+if (ch >= 'A' && ch <= 'Z')
+&#9;System.out.println(ch + " is an uppercase letter.");
+else if (ch >= 'a' && ch <= 'z')
+&#9;System.out.println(ch + " is a lowercase letter.");
+else if (ch >= '0' && ch <= '9')
+&#9;System.out.println(ch + " is a numeric character.");
+            </code></pre>
+
+            <h4 id="char-methods">
+                Character methods
+            </h4>
+
+            <p>
+                The <code>Character</code> class also provides a handful of <code>static</code> methods to do this as well. You can invoke these with <code>Character.methodName(ch)</code>, where <code>ch</code> is a variable of the <code>char</code> type.
+            </p>
+
+            <ul>
+                <li>
+                    <b><code>isDigit(ch)</code></b>: Returns true if <code>ch</code> is a numerical character.
+                </li>
+                <br>
+                <pre><code class="java">
+System.out.print(Character.isDigit('a')); &#9; // prints false
+System.out.print(Character.isDigit('1')); &#9; // prints true
+                </code></pre>
+
+                <li>
+                    <b><code>isLetter(ch)</code></b>: Returns true if <code>ch</code> is a letter character.
+                </li>
+                <br>
+                <pre><code class="java">
+System.out.print(Character.isLetter('a')); &#9; // prints true
+System.out.print(Character.isLetter('1')); &#9; // prints false
+                </code></pre>
+
+                <li>
+                    <b><code>isLetterOrDigit(ch)</code></b>: Returns true if <code>ch</code> is a numerical or letter character.
+                </li>
+                <br>
+                <pre><code class="java">
+System.out.print(Character.isLetterOrDigit('a')); &#9; // prints true
+System.out.print(Character.isLetterOrDigit('1')); &#9; // prints true
+System.out.print(Character.isLetterOrDigit('\n')); &#9; // prints false
+                </code></pre>
+
+                <li>
+                    <b><code>isLowerCase(ch)</code></b>: Returns true if <code>ch</code> is a lowercase letter character.
+                </li>
+                <br>
+                <pre><code class="java">
+System.out.print(Character.isLowerCase('a')); &#9; // prints true
+System.out.print(Character.isLowerCase('A')); &#9; // prints false
+System.out.print(Character.isLowerCase('1')); &#9; // prints false
+                </code></pre>
+
+                <li>
+                    <b><code>isUpperCase(ch)</code></b>: Returns true if <code>ch</code> is an uppercase letter character.
+                </li>
+                <br>
+                <pre><code class="java">
+System.out.print(Character.isUpperCase('a')); &#9; // prints false
+System.out.print(Character.isUpperCase('A')); &#9; // prints true
+System.out.print(Character.isUpperCase('1')); &#9; // prints false
+                </code></pre>
+
+                <li>
+                    <b><code>toLowerCase(ch)</code></b>: Returns the lowercase version of <code>ch</code>.
+                </li>
+                <br>
+                <pre><code class="java">
+System.out.print(Character.toLowerCase('a')); &#9; // prints a
+System.out.print(Character.toLowerCase('A')); &#9; // prints a
+                </code></pre>
+
+                <li>
+                    <b><code>toUpperCase(ch)</code></b>: Returns the uppercase version of <code>ch</code>.
+                </li>
+                <br>
+                <pre><code class="java">
+System.out.print(Character.toUpperCase('a')); &#9; // prints A
+System.out.print(Character.toUpperCase('A')); &#9; // prints A
+                </code></pre>
+
+            </ul>
+
+            <hr>
+
+            <h2 id="strings">
+                Strings
+            </h2>
+
+            <p>
+                The <code>char</code> data type can only hold a single character. When processing or printing text, programmers typically want to use a series of characters. For this, Java has the <code>String</code> data type.
+            </p>
+
+        </div>
+    </section>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="../lib/highlight.js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+    
+</html>
