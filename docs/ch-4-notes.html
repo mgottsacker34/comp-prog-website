@@ -346,9 +346,9 @@ char letter = 'a';
             </h5>
             <pre><code class="java">
 char letter = 'A';
-System.out.println(letter); &#9; &#9; // prints A 
+System.out.println(letter); &#9; &#9; // prints: A 
 char decimalLetter = (int) letter;
-System.out.println(decimalLetter); &#9; // prints 65
+System.out.println(decimalLetter); &#9; // prints: 65
             </code></pre>
 
             <p>
@@ -387,8 +387,8 @@ else if (ch >= '0' && ch <= '9')
                 </li>
                 <br>
                 <pre><code class="java">
-System.out.print(Character.isDigit('a')); &#9; // prints false
-System.out.print(Character.isDigit('1')); &#9; // prints true
+System.out.print(Character.isDigit('a')); &#9; // prints: false
+System.out.print(Character.isDigit('1')); &#9; // prints: true
                 </code></pre>
 
                 <li>
@@ -396,8 +396,8 @@ System.out.print(Character.isDigit('1')); &#9; // prints true
                 </li>
                 <br>
                 <pre><code class="java">
-System.out.print(Character.isLetter('a')); &#9; // prints true
-System.out.print(Character.isLetter('1')); &#9; // prints false
+System.out.print(Character.isLetter('a')); &#9; // prints: true
+System.out.print(Character.isLetter('1')); &#9; // prints: false
                 </code></pre>
 
                 <li>
@@ -405,9 +405,9 @@ System.out.print(Character.isLetter('1')); &#9; // prints false
                 </li>
                 <br>
                 <pre><code class="java">
-System.out.print(Character.isLetterOrDigit('a')); &#9; // prints true
-System.out.print(Character.isLetterOrDigit('1')); &#9; // prints true
-System.out.print(Character.isLetterOrDigit('\n')); &#9; // prints false
+System.out.print(Character.isLetterOrDigit('a')); &#9; // prints: true
+System.out.print(Character.isLetterOrDigit('1')); &#9; // prints: true
+System.out.print(Character.isLetterOrDigit('\n')); &#9; // prints: false
                 </code></pre>
 
                 <li>
@@ -415,9 +415,9 @@ System.out.print(Character.isLetterOrDigit('\n')); &#9; // prints false
                 </li>
                 <br>
                 <pre><code class="java">
-System.out.print(Character.isLowerCase('a')); &#9; // prints true
-System.out.print(Character.isLowerCase('A')); &#9; // prints false
-System.out.print(Character.isLowerCase('1')); &#9; // prints false
+System.out.print(Character.isLowerCase('a')); &#9; // prints: true
+System.out.print(Character.isLowerCase('A')); &#9; // prints: false
+System.out.print(Character.isLowerCase('1')); &#9; // prints: false
                 </code></pre>
 
                 <li>
@@ -425,9 +425,9 @@ System.out.print(Character.isLowerCase('1')); &#9; // prints false
                 </li>
                 <br>
                 <pre><code class="java">
-System.out.print(Character.isUpperCase('a')); &#9; // prints false
-System.out.print(Character.isUpperCase('A')); &#9; // prints true
-System.out.print(Character.isUpperCase('1')); &#9; // prints false
+System.out.print(Character.isUpperCase('a')); &#9; // prints: false
+System.out.print(Character.isUpperCase('A')); &#9; // prints: true
+System.out.print(Character.isUpperCase('1')); &#9; // prints: false
                 </code></pre>
 
                 <li>
@@ -435,8 +435,8 @@ System.out.print(Character.isUpperCase('1')); &#9; // prints false
                 </li>
                 <br>
                 <pre><code class="java">
-System.out.print(Character.toLowerCase('a')); &#9; // prints a
-System.out.print(Character.toLowerCase('A')); &#9; // prints a
+System.out.print(Character.toLowerCase('a')); &#9; // prints: a
+System.out.print(Character.toLowerCase('A')); &#9; // prints: a
                 </code></pre>
 
                 <li>
@@ -444,8 +444,8 @@ System.out.print(Character.toLowerCase('A')); &#9; // prints a
                 </li>
                 <br>
                 <pre><code class="java">
-System.out.print(Character.toUpperCase('a')); &#9; // prints A
-System.out.print(Character.toUpperCase('A')); &#9; // prints A
+System.out.print(Character.toUpperCase('a')); &#9; // prints: A
+System.out.print(Character.toUpperCase('A')); &#9; // prints: A
                 </code></pre>
 
             </ul>
@@ -457,8 +457,67 @@ System.out.print(Character.toUpperCase('A')); &#9; // prints A
             </h2>
 
             <p>
-                The <code>char</code> data type can only hold a single character. When processing or printing text, programmers typically want to use a series of characters. For this, Java has the <code>String</code> data type.
+                The <code>char</code> data type can only hold a single character. When processing or printing text, programmers typically want to use a series of characters. For this, Java has the <code>String</code> data type. The <code>String</code> type is a reference type, which differs from the primitive types we have seen thus far. Every <code>String</code> variable references an object, which has properties and methods. The syntax for invoking an object instance's methods is <code>referenceVariable.methodName(arguments)</code>.
             </p>
+<!--
+            <h4 id="str-simple-methods">
+                Simple <code>String</code> methods
+            </h4>
+
+            <ul>
+                <li>
+                    <b><code>length()</code></b>: Returns the number of characters in a string.
+                </li>
+                <br>
+                <pre><code class="java">
+"I love coding!".length() &#9; &#9; // returns 14
+
+String text = "I love coding";
+System.out.print(text.length()); &#9; // prints: 14
+                </code></pre>
+
+                <li>
+                    <b><code>charAt(index)</code></b>: Returns the character at the specified integer index of the string. Note the indexing begins with 0, so the last character of a string <code>s</code> is <code>s.length() - 1</code>.
+                </li>
+                <br>
+                <pre><code class="java">
+String message = "Howdy, partner.";
+System.out.print("First character: " + message.charAt(0)); &#9; // prints: H
+System.out.print("Last character:  " + message.charAt(14)); &#9; // prints: .
+                </code></pre>
+
+                <li>
+                    <b><code>concat(s2)</code></b>: Returns a new string that concatenates the reference string with s2. This method can be simplified with the addition operator ( <code>+</code> ).
+                </li>
+                <br>
+                <pre><code class="java">
+String s1 = "You're a great coder";
+String s2 = ", sir";
+String s3 = s1.concat(s2);
+System.out.println(s3); &#9; // prints: You're a great coder, sir.
+System.out.println(s1 + s2); &#9; // prints: You're a great coder, sir.
+                </code></pre>
+
+                <li>
+                    <b><code>toUpperCase()</code></b>: Returns a new string, capitalizing all letters.
+                </li>
+                <pre><code class="java">
+String s1 = "help";
+String s2 = s1.toUpperCase();
+System.out.print(s2); &#9; // prints: HELP 
+                </code></pre>
+
+                <li>
+                    <b><code>toLowerCase()</code></b>: Returns a new string, lowercasing all letters.
+                </li>
+                <br>
+                <pre><code class="java">
+String s1 = "eLiTe HaCkErZ";
+System.out.print(s1.toLowerCase()); &#9; // prints: elite hackers
+                </code></pre>
+            </ul>
+
+        -->
 
         </div>
     </section>
