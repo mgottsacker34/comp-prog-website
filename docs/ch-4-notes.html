@@ -459,7 +459,15 @@ System.out.print(Character.toUpperCase('A')); &#9; // prints: A
             <p>
                 The <code>char</code> data type can only hold a single character. When processing or printing text, programmers typically want to use a series of characters. For this, Java has the <code>String</code> data type. The <code>String</code> type is a reference type, which differs from the primitive types we have seen thus far. Every <code>String</code> variable references an object, which has properties and methods. The syntax for invoking an object instance's methods is <code>referenceVariable.methodName(arguments)</code>.
             </p>
-<!--
+
+            <h4 id="str-console">
+                Reading Strings from the console
+            </h4>
+
+            <p>
+                
+            </p>
+
             <h4 id="str-simple-methods">
                 Simple <code>String</code> methods
             </h4>
@@ -515,9 +523,34 @@ System.out.print(s2); &#9; // prints: HELP
 String s1 = "eLiTe HaCkErZ";
 System.out.print(s1.toLowerCase()); &#9; // prints: elite hackers
                 </code></pre>
+
+                <li>
+                    <b><code>trim()</code></b>: Returns a new string, removing all whitespace characters on beginning and end of string.
+                </li>
+                <br>
+                <pre><code class="java">
+String s1 = "  In a galaxy far, far away...\n\t";
+String s2 = s1.trim();
+System.out.print(s2); &#9; // prints: In a galaxy far, far away...
+                </code></pre>
+
+                <li>
+                    <b><code>length()</code></b>: Returns the number of characters in a string, as an integer.
+                </li>
+                <br>
+                <pre><code class="java">
+String name = "Luke Skywalker";
+int nameLength = name.length();
+System.out.print(nameLength); &#9; &#9; &#9; // prints: 14
+System.out.print(name.charAt(nameLength - 1)); &#9; // prints: r
+                </code></pre>
+
+                <li>
+                    <b><code></code></b>
+                </li>
             </ul>
 
-        -->
+        
 
         </div>
     </section>
