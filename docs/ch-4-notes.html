@@ -60,6 +60,14 @@
                         <li><a href="#char-methods">Character methods</a></li>
                     </ol>
                 </li>
+                <li>
+                    <a href="#strings">Strings</a>
+                    <ol type="a">
+                        <li><a href="#str-console">Getting Strings from console</a></li>
+                        <li><a href="#str-simple-methods">Simple methods</a></li>
+                        <li><a href="#str-comp">String comparison methods</a></li>
+                    </ol>
+                </li>
             </ol>
 
             <hr>
@@ -347,7 +355,7 @@ char letter = 'a';
             <pre><code class="java">
 char letter = 'A';
 System.out.println(letter); &#9; &#9; // prints: A 
-char decimalLetter = (int) letter;
+int decimalLetter = (int) letter;
 System.out.println(decimalLetter); &#9; // prints: 65
             </code></pre>
 
@@ -465,7 +473,15 @@ System.out.print(Character.toUpperCase('A')); &#9; // prints: A
             </h4>
 
             <p>
-                
+                Strings may be collected from the user in ways similar to those of numbers. Use a Scanner object's <code>next()</code> method to collect a single word, or its <code>nextLine()</code> method to collect a whole line of text.
+                <pre><code class="java">
+Scanner in = new Scanner(System.in);
+System.out.print("What is your first name?");
+String firstName = in.next();
+
+System.out.print("What is your full name?");
+String fullName = in.nextLine();
+                </code></pre>
             </p>
 
             <h4 id="str-simple-methods">
@@ -521,7 +537,7 @@ System.out.print(s2); &#9; // prints: HELP
                 <br>
                 <pre><code class="java">
 String s1 = "eLiTe HaCkErZ";
-System.out.print(s1.toLowerCase()); &#9; // prints: elite hackers
+System.out.print(s1.toLowerCase()); &#9; // prints: elite hackerz
                 </code></pre>
 
                 <li>
@@ -545,11 +561,25 @@ System.out.print(nameLength); &#9; &#9; &#9; // prints: 14
 System.out.print(name.charAt(nameLength - 1)); &#9; // prints: r
                 </code></pre>
 
-                <li>
-                    <b><code></code></b>
-                </li>
             </ul>
 
+            <h4 id="str-comp">
+                String comparison methods
+            </h4>
+
+            <ul>
+                <li>
+                    <b><code>equals(s2)</code></b>: Returns <code>true</code> if all of string's characters match those of s2.
+                </li>
+                <br>
+                <pre><code class="java">
+String s1 = "Jedi master";
+String s2 = "Jedi master";
+String s3 = "jedi master";
+System.out.println(s1.equals(s2)); &#9; // prints: true 
+System.out.println(s1.equals(s3)); &#9; // prints: false
+                </code></pre>
+            </ul>
         
 
         </div>
