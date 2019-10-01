@@ -66,6 +66,8 @@
                         <li><a href="#str-console">Getting Strings from console</a></li>
                         <li><a href="#str-simple-methods">Simple methods</a></li>
                         <li><a href="#str-comp">String comparison methods</a></li>
+                        <li><a href="#str-processing">String processing</a></li>
+                        <li><a href="#str-convert">Converting between strings and numbers</a></li>
                     </ol>
                 </li>
             </ol>
@@ -478,6 +480,7 @@ System.out.print(Character.toUpperCase('A')); &#9; // prints: A
 Scanner in = new Scanner(System.in);
 System.out.print("What is your first name?");
 String firstName = in.next();
+in.nextLine(); &#9; // needed to eat up the hanging newline character in System.in
 
 System.out.print("What is your full name?");
 String fullName = in.nextLine();
@@ -497,7 +500,7 @@ String fullName = in.nextLine();
 "I love coding!".length() &#9; &#9; // returns 14
 
 String text = "I love coding";
-System.out.print(text.length()); &#9; // prints: 14
+System.out.println(text.length()); &#9; // prints: 14
                 </code></pre>
 
                 <li>
@@ -506,8 +509,9 @@ System.out.print(text.length()); &#9; // prints: 14
                 <br>
                 <pre><code class="java">
 String message = "Howdy, partner.";
-System.out.print("First character: " + message.charAt(0)); &#9; // prints: H
-System.out.print("Last character:  " + message.charAt(14)); &#9; // prints: .
+System.out.println("First character: " + message.charAt(0)); &#9; &#9; &#9; // prints: H
+System.out.println("Last character:  " + message.charAt(14)); &#9; &#9; &#9; // prints: .
+System.out.println("Last character: " + message.charAt(message.length() - 1); &#9; // prints: .
                 </code></pre>
 
                 <li>
@@ -550,7 +554,7 @@ String s2 = s1.trim();
 System.out.print(s2); &#9; // prints: In a galaxy far, far away...
                 </code></pre>
 
-                <li>
+                <!-- <li>
                     <b><code>length()</code></b>: Returns the number of characters in a string, as an integer.
                 </li>
                 <br>
@@ -559,7 +563,7 @@ String name = "Luke Skywalker";
 int nameLength = name.length();
 System.out.print(nameLength); &#9; &#9; &#9; // prints: 14
 System.out.print(name.charAt(nameLength - 1)); &#9; // prints: r
-                </code></pre>
+                </code></pre> -->
 
             </ul>
 
@@ -592,7 +596,168 @@ System.out.println(s1.equals(s2)); &#9; // prints: true
 System.out.println(s1.equals(s3)); &#9; // prints: true
                 </code></pre>
 
+                <li>
+                    <b><code>compareTo(s2)</code></b>: Returns a positive integer if s2 comes before the string alphabetically, 0 if the string is the same as s2, or a negative integer if the string comes before s2 alphabetically.
+                </li>
+                <br>
+                <pre><code class="java">
+String s1 = "Sith Lord";
+String s2 = "Wookie";
+String s3 = "Wookie";
+s1.compareTo(s2); &#9; // returns positive integer
+s2.compareTo(s1); &#9; // returns negative integer
+s2.compareTo(s3); &#9; // returns 0
+                </code></pre>
+
+                <li>
+                    <b><code>compareToIgnoreCase(s2)</code></b>: Returns same result as compareTo(s2), but treats different cases as the same letter.
+                </li>
+                <br>
+                <pre><code class="java">
+String s1 = "Sith Lord";
+String s2 = "sith lord";
+String s3 = "Wookie";
+s1.compareToIgnoreCase(s2); &#9; // returns 0
+s2.compareToIgnoreCase(s3); &#9; // returns positive integer
+                </code></pre>
+
+                <li>
+                    <b><code>startsWith(prefix)</code></b>: Returns <code>true</code> if the string begins with the given prefix.
+                </li>
+                <br>
+                <pre><code class="java">
+String pre = "Mr";
+String teacherName = "Mr. Reis";
+String teacherName2 = "Mrs. Piper";
+String studentName = "Graham Vogt";
+teacherName.startsWith(pre); &#9; // returns true
+teacherName2.startsWith(pre); &#9; // returns true
+studentName.startsWith(pre); &#9; // returns false
+                </code></pre>
+
+                <li>
+                    <b><code>endsWith(suffix)</code></b>: Returns <code>true</code> if the string ends with the given suffix.
+                </li>
+                <br>
+                <pre><code class="java">
+String suff = "man";
+String name = "freshman";
+String name2 = "businessperson";
+boolean isGendered = name.endsWith(suff); &#9; // set isGendered to true 
+isGendered = name2.endsWith(suff); &#9; &#9; // set isGendered to false
+                </code></pre>
+
+                <li>
+                    <b><code>contains(s)</code></b>: Returns true if s is a substring of the string.
+                </li>
+                <br>
+                <pre><code class="java">
+String commonWord = "the";
+String phrase = "Welcome to the jungle.";
+System.out.println(phrase.contains(commonWord)); &#9; // prints: true 
+                </code></pre>
+
             </ul>
+
+            <h4 id="str-processing">
+                String processing
+            </h4>
+
+            <ul>
+                <li>
+                    <b><code>substring(beginIndex)</code></b>: Returns the string's substring beginning with the character at <code>beginIndex</code>.
+                </li>
+                <br>
+                <pre><code class="java">
+String message = "Welcome to Java";
+message = message.substring(0, 11) + "Hoth";
+System.out.println(message); &#9; // prints: Welcome to Hoth
+                </code></pre>
+
+                <li>
+                    <b><code>substring(beginIndex, endIndex)</code></b>: Returns the string's substring beginning with the character at <code>beginIndex</code> and ending with the character at <code>endIndex - 1</code>.
+                </li>
+                <br>
+                <pre><code class="java">
+String text = "Luke, I am your father.";
+String t1 = text.substring(0, 11);
+String t2 = text.substring(11);
+String newText = t1 + "not " + t2;
+System.out.println(newText); &#9; // prints: Luke, I am not your father.
+                </code></pre>
+
+                <li>
+                    <b><code>indexOf(ch)</code></b>: Returns the index of the first occurrence of <code>char</code> ch in the string, or -1 if not matched.
+                </li>
+                <li>
+                    <b><code>indexOf(ch, fromIndex)</code></b>: Returns the index of the first occurrence of <code>char</code> ch in the string after position <code>fromIndex</code>, or -1 if not matched.
+                </li>
+                <br>
+                <pre><code class="java">
+String msg = "Looking for something?";
+System.out.println(msg.indexOf('o')); &#9; // prints: 1
+System.out.println(msg.indexOf('o', 2)); &#9; // prints: 9
+System.out.println(msg.indexOf('O')); &#9; // prints: -1
+                </code></pre>
+
+                <li>
+                    <b><code>indexOf(str)</code></b>: Returns the index of the first occurrence of <code>String</code> str in the string, or -1 if not matched.
+                </li>
+                <li>
+                    <b><code>indexOf(str, fromIndex)</code></b>: Returns the index of the first occurrence of <code>String</code> str in the string after position <code>fromIndex</code>, or -1 if not matched.
+                </li>
+                <br>
+                <pre><code class="java">
+String msg = "Text processing is cool.";
+System.out.println(msg.indexOf("cool")); &#9; // prints: 19
+System.out.println(msg.indexOf("lame")); &#9; // prints: -1
+                </code></pre>
+
+                <li>
+                    <b><code>lastIndexOf(ch)</code></b>: Returns the index of the last occurrence of <code>char</code> ch in the string, or -1 if not matched.
+                </li>
+                <li>
+                    <b><code>lastIndexOf(ch, fromIndex)</code></b>: Returns the index of the last occurrence of <code>char</code> ch in the string after position<code>fromIndex</code>, or -1 if not matched.
+                </li>
+                <li>
+                    <b><code>lastIndexOf(str)</code></b> Returns the index of the last occurrence of <code>String</code> str in the string, or -1 if not matched.
+                </li>
+                <li>
+                    <b><code>indexOf(str, fromIndex)</code></b>: Returns the index of the last occurrence of <code>String</code> str in the string after position <code>fromIndex</code>, or -1 if not matched.
+                </li>
+            </ul>
+
+            <h4 id="str-convert">
+                Converting between strings and numbers
+            </h4>
+
+            <ul>
+                <li>
+                    <b><code>Integer.parseInt(intString)</code></b>: Return the <code>int</code> value of a numeric string.
+                </li>
+                <br>
+                <pre><code class="java">
+String numStr = "789";
+int num = Integer.parseInt(numStr); &#9; // num holds 789
+                </code></pre>
+
+                <li>
+                    <b><code>Double.pareseDouble(doubleString)</code></b>: Return the <code>int</code> value of a numeric string.
+                </li>
+                <br>
+                <pre><code class="java">
+String numStr = "56.789";
+int num = Integer.parseInt(numStr); &#9; // num holds 56.789
+                </code></pre>
+            </ul>
+
+            <p>
+                You can convert a number to a string using the concatenation operator:
+                <pre><code class="java">
+int num = 789;
+String numStr = num + ""; &#9; // num holds "789"
+                </code></pre>
+            </p>
         
 
         </div>
