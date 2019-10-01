@@ -592,8 +592,8 @@ System.out.println(s1.equals(s3)); &#9; // prints: false
 String s1 = "Jedi master";
 String s2 = "Jedi master";
 String s3 = "jedi master";
-System.out.println(s1.equals(s2)); &#9; // prints: true 
-System.out.println(s1.equals(s3)); &#9; // prints: true
+System.out.println(s1.equalsIgnoreCase(s2)); &#9; // prints: true 
+System.out.println(s1.equalsIgnoreCase(s3)); &#9; // prints: true
                 </code></pre>
 
                 <li>
@@ -670,7 +670,7 @@ System.out.println(phrase.contains(commonWord)); &#9; // prints: true
                 <br>
                 <pre><code class="java">
 String message = "Welcome to Java";
-message = message.substring(0, 11) + "Hoth";
+message = message.substring(11) + "Hoth";
 System.out.println(message); &#9; // prints: Welcome to Hoth
                 </code></pre>
 
@@ -742,12 +742,12 @@ int num = Integer.parseInt(numStr); &#9; // num holds 789
                 </code></pre>
 
                 <li>
-                    <b><code>Double.pareseDouble(doubleString)</code></b>: Return the <code>int</code> value of a numeric string.
+                    <b><code>Double.parseDouble(doubleString)</code></b>: Return the <code>int</code> value of a numeric string.
                 </li>
                 <br>
                 <pre><code class="java">
 String numStr = "56.789";
-int num = Integer.parseInt(numStr); &#9; // num holds 56.789
+double num = Integer.parseDouble(numStr); &#9; // num holds 56.789
                 </code></pre>
             </ul>
 
