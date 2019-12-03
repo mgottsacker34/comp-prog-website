@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="Marquette University High School,MUHS,Programming,Java,Gottsacker,Matt,Matthew">
+    <meta name="author" content="Matt Gottsacker">
+    
+    <title>comp prog/final-project</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../lib/reveal.js/lib/css/monokai.css">
+    
+    <!-- Custom assignment styling -->
+    <link rel="stylesheet" href="../../css/assignment-style.css">
+    
+</head>
+
+<body>
+    <section class="content-section top-section">
+        <div class="container">
+            <br><br>
+            <h1>Final Project</h1>
+            <p>
+                Mr. Gottsacker <br>
+                Computer Programming <br>
+            </p>
+            <hr>
+            <br>
+            <p>
+                The final project for this class has two distinct options. 
+                <ol type="a">
+                    <li>
+                        The first option is a series of exercises. They are more difficult in nature than a typical exercise that you have been expected to complete in a day. There will be six exercises enumerated. If you choose this option, you will select five of them to complete. 
+                    </li>
+                    <li>
+                        The second option is a single, larger project. It is larger in scope and includes several complex programming problems. However, it is also more flexible and encourages creative programming and writing.
+                    </li>
+                </ol>
+                You do not need to communicate which option you select to me.
+                <br><br>
+                Students who successfully complete both project options will earn extra credit.
+            </p>
+            <br>
+            <hr>
+            <br>
+            <h3>
+                Project Option A: U-Pick-5
+            </h3>
+            <br>
+            <p>
+                Select five of the six assignments below and complete them:
+                <ol>
+                    <li>
+                        <b>Rhombus calculator:</b> Ask the user for four angles and side lengths of a rhombus. Verify that the information they entered makes a valid rhombus. If it does, compute the area of it. If not, inform the user.
+                    </li>
+                    <li>
+                        <b>Rock-paper-scissors game:</b> Make a rock-paper-scissors game. Ask the user to pick rock, paper, or scissors, and have the computer randomly generate rock, paper, or scissors. Play until the user or the computer wins two games.
+                    </li>
+                    <li>
+                        <b>Craps simulator</b>: Craps is a relatively simple dice game played with two dice. One of the rules is that if the player rolls a 7 or 11, they win immediately. Simulate the Craps dice roll one million times. Output the percentage of the time that the user wins immediately.
+                    </li>
+                    <li>
+                        <b>Word searcher</b>: Prompt the user to enter a long string of text. Prompt the user to enter a string for which they want to search in the long string of text. Output the number of times the string occurs.
+                    </li>
+                    <li>
+                        <b>Password generator</b>: Randomly generate a 12-character password consisting of lowercase letters, uppercase letters, numbers, and symbols. For each character, your program should first randomly choose to which character class the random character will belong.
+                    </li>
+                    <li>
+                        <b>Password cracker:</b> Passwords are rarely stored on servers in plaintext. Instead, each user's plaintext password is passed through a hashing algorithm, which produces a string of numbers and letters that is the same length regardless of the length of the user's password. A common hashing algorithm is the <a href="https://en.wikipedia.org/wiki/MD5">MD5 algorithm</a>. Given the string <code>aaaa</code>, MD5 produces <code>74b87337454200d4d33f80c4663dc5e5</code>. The resultant hash is fast to compute, but computationally expensive to reverse. This quality makes hashed passwords resistant to hackers (to some degree) because if they obtain the list of hashed passwords, they cannot read them directly and input them into a sign-in page. However, they can employ looping to develop a brute force attack on a hashed password. In this kind of attack, hackers write a program to cycle through every possible combination of characters, compute each combination's hash, and compare it to the hash they are trying to crack.
+                        <br><br>
+                        Write a password cracker. Prompt the user to enter a 4-character password in plaintext. Compute its hash with the method below. Then, use Java to generate combinations of 4 characters and compute their hashes until it finds a matching hash. Note that this process will take a while. Output the matching hash and plaintext, and the number of tries it took the computer to find the match. Use the following method (note that you will need to import <code>java.security.*</code> and <code>java.math.*</code>):
+                        <br><br>
+                        <pre><code class="hljs java">
+// Compute MD5 hash string of a plaintext string
+public static String computeMD5Hash (String plaintext) {
+    String hashtext = "";
+    try {
+        MessageDigest m = MessageDigest.getInstance("MD5");
+        m.reset();
+        m.update(plaintext.getBytes());
+        byte[] digest = m.digest();
+        BigInteger bigInt = new BigInteger(1,digest);
+        hashtext = bigInt.toString(16);
+        while(hashtext.length() < 32 ){
+            hashtext = "0"+hashtext;
+        }
+    } catch (NoSuchAlgorithmException ae) {
+        System.exit(2);
+    } 
+    return hashtext;
+}
+                        </code></pre>
+                        <br>
+                        You could also consider using the following method in generating candidate strings:
+                        <br><br>
+                        <pre><code class="hljs java">
+// Generate a random character between ch1 and ch2 
+public static char getRandomCharacter(char ch1, char ch2) {
+    return (char)(ch1 + Math.random() * (ch2 - ch1 + 1));
+}                                
+                        </code></pre>
+                    </li>
+                </ol>
+            </p>
+            <br>
+            <hr>
+            <br>
+            <h3>
+                Project Option B: Game
+            </h3>
+            <br>
+            <p>
+                Write a text adventure game in Java. This project option is more open-ended, but has some stipulations. 
+                <br><br>
+                Your game <b>must</b> include all of the following:
+                <ul>
+                    <li>
+                        A title.
+                    </li>
+                    <li>
+                        5 stages, each with its own task or activity for the user. Each stage must have at least one user interaction (gathering input from user). The code for each stage must be in its own method.
+                    </li>
+                    <li>
+                        A character representing the user. The character must have:
+                        <ol>
+                            <li>a name (can be user-entered)</li>
+                            <li>some kind of special ability that affects gameplay</li>
+                        </ol>
+                    </li>
+                    <li>
+                        An instance of ASCII art.
+                    </li>
+                    <li>
+                        An element of luck and <b>three</b> elements of randomness that affects gameplay. This could be a randomly-generated number that affects the user's success overall, or for a specific task. 
+                    </li>
+                    <li>
+                        A mathematical computation.
+                    </li>
+                    <li>
+                        Some kind of matrix generated with a loop and according to some pattern.
+                    </li>
+                    <li>
+                        Some other looping element.
+                    </li>
+                </ul>
+                <br><br>
+            </p>
+            <hr>
+            <h4>
+                Project submission
+            </h4>
+            <p>
+                In an email with subject line <b>Computer Programming Final Project</b>, send me your project <code>.java</code> files. Your files should be named according to the following convention for Option A: <code>FinalProjectA#.java</code>, where <code>#</code> is the number of the exercise from the list above. For Option B, name your file the same as the name of your game (for example: <code>Viro.java</code>).
+            </p>
+            <br><br><br>
+        </div>
+    </section>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src='../../lib/highlight.js/highlight.pack.js'></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+    
+    </html>
