@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="Marquette University High School,MUHS,Programming,Java,Gottsacker,Matt,Matthew">
+    <meta name="author" content="Matt Gottsacker">
+    
+    <title>comp prog/ch-7-notes</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"> -->
+
+    <link rel="stylesheet" href="../lib/highlight.js/styles/a11y-dark.css">
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <!-- <link rel="stylesheet" href="../lib/reveal.js/lib/css/monokai.css"> -->
+    
+    <!-- Custom assignment styling -->
+    <link rel="stylesheet" href="../../css/assignment-style.css">
+    
+</head>
+
+<style>
+    b>code {
+        color: black;
+    }
+</style>
+
+<body>
+    <section class="content-section top-section">
+        <div class="container">
+            <h1>Chapter 7 useful methods</h1>
+            <p>
+                Mr. Gottsacker <br>
+                Computer Programming <br>
+            </p>
+
+            <hr>
+
+            <h3>
+                Gather array input from user
+            </h3>
+            <pre><code class="java">
+public static double[] inputArray() {
+    Scanner in = new Scanner(System.in);
+    System.out.print("Enter the number of elements: ");
+    int size = in.nextInt();
+    double[] result = new double[size];
+    for (int i = 0; i < result.length; i++) {
+        System.out.print("Enter an element: ");
+        result[i] = in.nextDouble();
+    }
+    return result;
+}
+            </code></pre>
+
+            <h3>
+                Display an array
+            </h3>
+            <pre><code class="java">
+public static void displayArray(double[] array) {
+    for (int i = 0; i < array.length; i++) {
+        System.out.print(array[i] + " ");
+    }
+    System.out.println();
+}
+            </code></pre>
+
+            <h3>
+                Create an array of random doubles
+            </h3>
+            <pre><code class="java">
+public static double[] randomArray(int size) {
+    double[] result = new double[size];
+    for (int i = 0; i < result.length; i++) {
+        result[i] = Math.random() * 100;
+    }
+    return result;
+}
+            </code></pre>
+
+            <h3>
+                Copy an array (of doubles)
+            </h3>
+            <pre><code class="java">
+public static double[] copyOf(double[] array) {
+    double[] result = new double[array.length];
+    for (int i = 0; i < array.length; i++) {
+        result[i] = array[i];
+    }
+    return result;
+}
+            </code></pre>
+
+            <h3>
+                Linear search
+            </h3>
+            <pre><code class="java">
+public static int linearSearch(int[] list, int key) {
+    for (int i = 0; i < list.length; i++) 
+        if (key == list[i]) 
+            return i;
+    return -1;
+}
+            </code></pre>
+
+            <h3>
+                Binary search
+            </h3>
+            <pre><code class="java">
+public static int binarySearch(int[] list, int key) {
+    int low = 0;
+    int high = list.length - 1;
+    while (high >= low) {
+        int mid = (low + high) / 2;
+        if (key < list[mid]) 
+            high = mid - 1;
+        else if (key == list[mid])
+            return mid;
+        else
+            low = mid + 1;
+    }
+    return -1;
+}
+            </code></pre>
+
+            <h3>
+                Selection sort
+            </h3>
+            <pre><code class="java">
+public static void selectionSort(double[] list) {
+    for (int i = 0; i < list.length - 1; i++) {
+        double currentMin = list[i];
+        int currentMinIndex = i;
+        for (int j = i + 1; j < list.length; j++) {
+            if (currentMin > list[j]) {
+                currentMin = list[j];
+                currentMinIndex = j;
+            }
+        }
+        if (currentMinIndex != i) {
+            list[currentMinIndex] = list[i];
+            list[i] = currentMin;
+        }
+    }
+}
+            </code></pre>
+
+            <h3>
+                Insertion sort
+            </h3>
+            <pre><code class="java">
+public static void insertionSort(double[] list) {
+    for (int i = 1; i < list.length; i++) {
+        double currentElement = list[i];
+        int k;
+        for (k = i - 1; k >= 0 && list[k] > currentElement; k--) {
+            list[k+1] = list[k];
+        }
+        list[k+1] = currentElement;
+    }
+}
+            </code></pre>
+
+        </div>
+    </section>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="../lib/highlight.js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+    
+</html>
