@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="Marquette University High School,MUHS,Programming,Java,Gottsacker,Matt,Matthew">
+    <meta name="author" content="Matt Gottsacker">
+    
+    <title>comp prog/final-project-b</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../lib/reveal.js/lib/css/monokai.css">
+    
+    <!-- Custom assignment styling -->
+    <link rel="stylesheet" href="../../css/assignment-style.css">
+    
+</head>
+
+<body>
+    <section class="content-section top-section">
+        <div class="container">
+            <br><br>
+            <h1>Final Project - Tips for Option B (GAME)</h1>
+            <p>
+                Mr. Gottsacker <br>
+                Computer Programming <br>
+            </p>
+            <hr>
+            <br>
+            <h3>
+                Project Option B: Game
+            </h3>
+            <br>
+            <p>
+                Use the following general format for the <b><code>main()</code></b> method. Note how the <b><code>in</code></b> object (of the Scanner class) is passed to each stage. This pattern makes it possible to reuse that Scanner without creating one inside each <b><code>stage</code></b> method. Also note the use of and placement of the <b><code>speed</code></b> variable. This variable is used in my <b><code>printNarration</code></b> method to control how fast it prints. Also also note the syntax <b><code>throws InterruptedException</code></b> appended to the main method header. This code is needed to force the delay in the <b><code>printNarration</code></b> method.
+                <br><br>
+                <img src="../../assets/img/VIRO_1.png" width="80%" />
+            </p>
+            <br><br>
+            <p>
+                To format narration how my game handles it, you can use the following code. Anywhere else in your program, you can simply call <b><code>printNarration("A STRING OF TEXT OF ANY LENGTH");</code></b>, and the program will print the text letter by letter, adding line breaks where appropriate.
+                <pre><code class="java hljs">
+    public static void printNarration(String message) throws InterruptedException {
+        System.out.print("\t ");
+        boolean linebreak = false;
+        for (int i = 0; i < message.length(); i++) {
+            if (i != 0 && i % 70 == 0) {
+                linebreak = true;
+            }
+            if (linebreak && message.charAt(i) == ' ') {
+                System.out.print("\n\t");
+                linebreak = false;
+            }
+            System.out.print(message.charAt(i));
+            if (message.charAt(i) == '.') {
+                Thread.sleep(700 / speed);
+            } else {
+                Thread.sleep(20 / speed);
+            }
+        }
+        System.out.println();
+    }
+                </code></pre>
+            </p>
+            
+            <hr>
+            
+            <br><br><br>
+        </div>
+    </section>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src='../../lib/highlight.js/highlight.pack.js'></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+    
+    </html>
