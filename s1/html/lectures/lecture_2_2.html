@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>comp prog/lecture_2_2</title>
+
+		<link rel="stylesheet" href="../../lib/reveal.js/css/reset.css">
+		<link rel="stylesheet" href="../../lib/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../lib/reveal.js/css/theme/black-mg.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../lib/reveal.js/lib/css/monokai.css">
+
+		<!-- Override CSS -->
+		<link rel="stylesheet" href="../../css/revealjs-overrides.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../lib/reveal.js/css/print/pdf.css' : '../../lib/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section class="title-slide">
+					<div class="title-main">
+						<h4>
+							lecture_2_2:
+						</h4>
+						<h1>
+							Software Development Process
+						</h1>
+					</div>
+
+					<div class="title-info">
+						<p>
+							comp-prog/lecture_2_2
+							<br>
+							Matt Gottsacker
+							<br>
+							Marquette University High School
+							<br>
+							Last modified: 09.05.2019
+						</p>
+					</div>
+                </section>
+                
+                <section>
+                    <h2>
+                        Software development process: overview
+                    </h2>
+                    <ul>
+                        <li class="fragment">There is usually a question on the AP test about software dev.</li>
+                        <li class="fragment">This section will shape how you approach programming problems, especially the group projects. Your README files will demonstrate your understanding of this section.</li>
+                        <li class="fragment">Programming is engineering.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>
+                        Waterfall methodology (pg. 54)
+                    </h4>
+                    <img src="../../assets/img/Waterfall_model.svg" style="margin-bottom: 2em;"/>
+                    <p>Image from <a href="https://en.wikipedia.org/wiki/Waterfall_model">Wikipedia.org</a></p>
+                </section>
+
+                <section>
+                    <h2>
+                        1. Requirements specification
+                    </h2>
+                    <ul>
+                        <li class="fragment">Understand and dictate what &nbsp;<span class="code-ex"><b>problem</b></span>&nbsp; the software will solve.</li>
+                        <li class="fragment">The textbook states problems clearly. In the wild, problems are not always clearly defined, so developers need to interact with stakeholders frequently.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        2. System analysis
+                    </h2>
+                    <ul>
+                        <li class="fragment">Based on requirements specification, determine outputs of the software.</li>
+                        <li class="fragment">Determine how to reach the outputs.</li>
+                        <li class="fragment">Determine what the program's inputs are.</li>
+                        <li class="fragment">System analysis involves constructing/enumerating any formulas required.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        3. System design
+                    </h2>
+                    <ul>
+                        <li class="fragment">Describe the algorithm being used.</li>
+                        <li class="fragment">Break down the problem into components that are solved by subsystems.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        4. Implementation / development
+                    </h2>
+                    <ul>
+                        <li class="fragment">Write code. Create the program.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        5. Testing
+                    </h2>
+                    <ul>
+                        <li class="fragment">Check that the code meets requirements and does not have any bugs / mistakes.</li>
+                        <li class="fragment">How do you know it works?</li>
+                        <li class="fragment">For your group projects, I will require you to describe test cases that you use. For example, you may test it using simple values, or check complex calculations with a calculator.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        6. Deployment
+                    </h2>
+                    <ul>
+                        <li class="fragment">Release the software for install, or host it on a website.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        7. Maintenance 
+                    </h2>
+                    <ul>
+                        <li class="fragment">Security updates</li>
+                        <li class="fragment">Feature improvements</li>
+                        <li class="fragment">Fix bugs</li>
+                        <li class="fragment">Incorporate changing requirements</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        Waterfall vs. Agile
+                    </h2>
+                    <ul>
+                        <li class="fragment">Waterfall development is effective for small projects with clear requirements.</li>
+                        <li class="fragment">For many development teams, the software to build has changing requirements that are not clear at the project's inception. These teams are often cross-functional and smaller. They use the Agile development methodology.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>
+                        Waterfall vs. Agile
+                    </h2>
+                    <img src="../../assets/img/waterfallvsagile.jpg" />
+                </section>
+
+				<section>
+					<h1>end<span id="underscore">_</span></h1>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="../../lib/reveal.js/js/reveal.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="../../js/main.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../../lib/reveal.js/plugin/markdown/marked.js' },
+					{ src: '../../lib/reveal.js/plugin/markdown/markdown.js' },
+					{ src: '../../lib/reveal.js/plugin/notes/notes.js', async: true },
+                    { src: '../../lib/reveal.js/plugin/highlight/highlight.js', async: true },
+                    { src: '../../lib/reveal.js/plugin/reveal.js-menu-master/menu.js', async: true }
+                ],
+                menu: {
+					themes: [
+						{ name: 'Black', theme: '../../lib/reveal.js/css/theme/black-mg.css' },
+						{ name: 'White', theme: '../../lib/reveal.js/css/theme/white-mg.css' }
+					]
+				},
+				hash: true,
+				slideNumber: true,
+				transition: 'none',
+                center: true,
+                pdfSeparateFragments: false
+			});
+		</script>
+	</body>
+</html>
