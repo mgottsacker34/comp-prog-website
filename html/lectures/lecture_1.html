@@ -49,10 +49,21 @@
 							<br>
 							Marquette University High School
 							<br>
-							Last modified: 08.19.2019
+							Last modified: 01.10.2020
 						</p>
 					</div>
-				</section>
+                </section>
+                
+                <!-- <section>
+                    <h2>
+                        Reading quiz!
+                    </h2>
+                    <ol class="fragment">
+                        <li>
+                            Write a paragraph discussing a concept you learned about in the reading. Relate it to the movie we watched in class yesterday.
+                        </li>
+                    </ol>
+                </section> -->
 
 				<section>
 					<h2>
@@ -153,23 +164,23 @@
 							Assembly makes machine language easier to understand, though it is still not very human-readable. Assembly languages can be directly converted into machine language via an assembler. Because it is compiled into machine language, assembly is different for each processor architecture.
 						</p>
 						<pre class="x86asm hljs"><code>
-	.global _start
+  .global _start
 
-	.text
+  .text
 _start:
-	# write(1, message, 13)
-	mov     $1, %rax                # system call 1 is write
-	mov     $1, %rdi                # file handle 1 is stdout
-	mov     $message, %rsi          # address of string to output
-	mov     $13, %rdx               # number of bytes
-	syscall                         # invoke operating system to do the write
+  # write(1, message, 13)
+  mov     $1, %rax        # system call 1 is write
+  mov     $1, %rdi        # file handle 1 is stdout
+  mov     $message, %rsi  # address of string to output
+  mov     $13, %rdx       # number of bytes
+  syscall                 # invoke OS to write
 
-	# exit(0)
-	mov     $60, %rax               # system call 60 is exit
-	xor     %rdi, %rdi              # we want return code 0
-	syscall                         # invoke operating system to exit
+  # exit(0)
+  mov     $60, %rax       # system call 60 is exit
+  xor     %rdi, %rdi      # we want return code 0
+  syscall                 # invoke operating system to exit
 message:
-	.ascii  "Hello, world\n"  
+  .ascii  "Hello, world\n"  
 						</code></pre>
 					</section>
 
@@ -269,6 +280,11 @@ System.out.print("Hello, world!")
 							<li>
 							Object-oriented
 							</li>
+                        </span>
+                        <span class="fragment">
+							<li>
+							Highly portable due to the Java Virtual Machine (JVM)
+							</li>
 						</span>
 						<span class="fragment">
 							<li>
@@ -298,7 +314,22 @@ System.out.print("Hello, world!")
 					</ul>
 				</section>
 
-				
+				<!-- <section>
+                    <h2>
+                        Reading quiz!
+                    </h2>
+                    <ol>
+                        <li>
+                            Define a compile error.
+                        </li>
+                        <li>
+                            Define a runtime error.
+                        </li>
+                        <li>
+                            Define a logic error.
+                        </li>
+                    </ol>
+                </section> -->
 
 				<section>
 					<h2>
@@ -307,11 +338,13 @@ System.out.print("Hello, world!")
 					<pre><code class="java hljs" data-trim data-line-numbers>
 public class Lecture_1_1 {
 
-	public static void main (String[] args) {
-		System.out.println("Mr. Gottsacker is super cool.");
-		System.out.println("Java is a cool language.");
-		System.out.println("I can't decide which is cooler.");
-	}
+  public static void main (String[] args) {
+
+    System.out.println("Mr. Gottsacker is super cool.");
+    System.out.println("Java is a cool language.");
+    System.out.println("I can't decide which is cooler.");
+
+  }
 }
 					</code></pre>
 				</section>
