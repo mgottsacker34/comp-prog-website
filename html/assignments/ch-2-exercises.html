@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="Marquette University High School,MUHS,Programming,Java,Gottsacker,Matt,Matthew">
+    <meta name="author" content="Matt Gottsacker">
+    
+    <title>comp prog/ch-2-exercises</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"> -->
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../lib/reveal.js/lib/css/monokai.css">
+    
+    <!-- Custom assignment styling -->
+    <link rel="stylesheet" href="../../css/assignment-style.css">
+    
+</head>
+
+<body>
+    <section class="content-section top-section">
+        <div class="container">
+            <h1>Exercises - chapter 2</h1>
+            <p>
+                Mr. Gottsacker <br>
+                Computer Programming <br>
+            </p>
+            <hr>
+            <p>
+                <b>Note:</b> In the example code, keyboard input from the user will be represented using <code><span class="console-input" style="background-color: black;">bold, bright green</span></code>.
+            </p>
+            <hr>
+            <h3>
+                2.101
+            </h3>
+            <p>
+                Write a program that reads a Celsius degree in a <code>double</code> value from the console, then converts it to Fahrenheit and displays the result. The formula for the conversion is as follows:
+                <br>
+                fahrenheit = (9 / 5) * celsius + 32
+                <br><br>
+                <b>Note:</b> In Java, <code>9 / 5</code> is <code>1</code>, but <code>9.0 / 5</code> is <code>1.8</code>.
+                <br><br>
+                Here is a sample run:
+                <pre><code class="java hljs">
+Enter a temperature in degrees Celsius: <span class="console-input">28</span>
+28.0 Celsius is 82.4 Fahrenheit.
+                </code></pre>
+            </p>
+            <br>
+            <h3>
+                2.102
+            </h3>
+            <p>
+                Write a program that prompts a user for for the radius and length of a cylinder. Compute the area and volume of the cylinder using the formulas below. Use a named constant for Pi with its first 8 digits after the decimal point in your program.
+                <br>
+                area = radius * radius * \(\pi\)
+                <br>
+                volume = area * length
+                <br><br>
+                Sample run:
+                <pre><code class="java hljs">
+Enter the cylinder's radius: <span class="console-input">6</span>
+Enter the cylinder's length: <span class="console-input">3</span>
+The area is: 113.0973354
+The volume is: 339.2920062
+                </code></pre>
+            </p>
+            <br>
+            <h3>
+                2.103
+            </h3>
+            <p>
+                From <a href="https://en.m.wikipedia.org/wiki/Speed_of_light">Wikipedia</a>:
+                <br>
+                The speed of light in vacuum, commonly denoted \(c\), is a universal physical constant important in many areas of physics. Its exact value is 299,792,458 metres per second. It is exact because by international agreement a metre is defined as the length of the path travelled by light in vacuum during a time interval of 1/299792458 second. According to special relativity, \(c\) is the upper limit for the speed at which conventional matter and information can travel. 
+                <br><br>
+                Write a program that prompts the user for a number of miles. Compute how many minutes it would take light to travel that distance, and display the result to the user. One mile is <code>1.60934</code> kilometers.
+                <br><br>
+                Use test distances similar in size to the sample run below, which is the distance from the Sun to the Earth.
+                <br><br>
+                Sample run:
+                <pre><code class="hljs">
+Enter a distance in miles: <span class="console-input">92957130.4</span>
+It takes light 8.316880735067306 minutes to travel 9.29571304E7 miles.
+                </code></pre>
+            </p>
+            <br>
+            <h3>
+                2.104
+            </h3>
+            <p>
+                Write a program that calculates tip at a restaurant. The program should prompt the user for the cost of the meal and for a gratuity percentage. The program should compute the gratuity and total cost, and then display the results to the user.
+                <br><br>
+                Sample run:
+                <pre><code class="java hljs">
+Enter the subtotal: <span class="console-input">20.0</span>
+Enter the gratuity percentage: <span class="console-input">20</span>
+The gratuity is $4.0 and the total is $24.0
+                </code></pre>
+            </p>
+            <br>
+            <h3>
+                2.105
+            </h3>
+            <p>
+                Write a program that prompts the user to enter a number of minutes. Compute the number of whole years and days occur over the user's input. You may assume that each year has exactly 365 days (no leap years).
+                <br><br>
+                Sample run:
+                <pre><code class="hljs">
+Enter the number of minutes: <span class="console-input">1061190000</span>
+1061190000 minutes is approximately 2019 years and 2 days.
+                </code></pre>
+            </p>
+            <br>
+            <h3>
+                2.106
+            </h3>
+            <p>
+                Objects in orbit around Earth follow a uniform and repeating trajectory around the planet. The speed of this orbit depends on the distance from the object to the center of the Earth. Often, artifical satellites maintain a consistent distance from the Earth, forming a circular orbit. Then, at any time, the distance from the object to the center of the Earth is the radius of that circle. In this case, the orbital velocity of the satellite can be computed with the following equation:
+                <br><br>
+                \( \sqrt{G * m_E \over r} \)
+                <br><br>
+                where:
+                <br>
+                \(G\) = the universal gravitational constant = \(6.673 * 10^{-11}   {N\cdot m^2/kg^2}\)
+                <br>
+                \(m_E\) = the mass of Earth = \(5.98 * 10^{24} kg\)
+                <br>
+                \(r\) = the distance from the object to the center of the Earth
+                <br><br>
+                The radius of the Earth is \(6.38 * 10^6 m\).
+                <br><br>
+                Write a program that prompts the user for a satellite's distance from the Earth's crust. Assume the satellite follows the circular orbit described above. Compute its orbital speed and display the result to the user. The example below is the orbital speed of the International Space Station.
+                <br><br>
+                <b>Hint:</b> Use the <a href="https://www.tutorialspoint.com/java/lang/math_pow.htm"><code>Math.pow()</code> method</a> or the <a href="https://www.tutorialspoint.com/java/lang/math_sqrt.htm"><code>Math.sqrt()</code> method</a>.
+                <br><br>
+                Sample run:
+                <pre><code class="hljs">
+Enter the distance between the satellite and Earth's surface (in km): <span class="console-input">400</span>
+A satellite that is 400000.0 meters from Earth's surface travels at a speed of 7671.782953610956 m/s
+                </code></pre>
+            </p>
+            <br>
+            <hr>
+            <h2>
+                Exercises from textbook (pg. 66 - 68)
+            </h2>
+            <br>
+            <h3>
+                2.12
+            </h3>
+            <p>Aviation: finding required runway length for airplanes</p>
+            <br>
+            <h3>
+                2.13
+            </h3>
+            <p>Finances: calculating compound value</p>
+            <br>
+            <h3>
+                2.15
+            </h3>
+            <p>Calculating geometric distances</p>
+            <br>
+            <h3>
+                2.17
+            </h3>
+            <p>Meteorology: computing coldness</p>
+            <br><br><br><br>
+            <!-- <h3>
+                2.7
+            </h3>
+            <p>
+                Given an airplane's acceleration \(a\) and take-off speed \(v\), you can compute the minimum runway length needed for an airplane to take off using the formula:
+                <br><br>
+                \(length\) = \(v^2 \over 2 * a \)
+                <br><br>
+                Write a program that prompts the user to enter \(v\) in meters per second (m/s) and the acceleration \(a\) in meters per second squared, and displays the minimum runway length in meters.
+                <br><br>
+                Sample run: 
+                <pre><code class="hljs">
+Enter speed in m/s: <span class="console-input">60</span>
+Enter acceleration in m/s^2: <span class="console-input">3.5</span>
+The minimum runway length for this airplane is 514.286 meters.
+                </code></pre>
+            </p> -->
+        </div>
+    </section>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    </body>
+    
+    </html>

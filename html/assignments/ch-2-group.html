@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="Marquette University High School,MUHS,Programming,Java,Gottsacker,Matt,Matthew">
+    <meta name="author" content="Matt Gottsacker">
+    
+    <title>comp prog/ch-2-group</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"> -->
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../lib/reveal.js/lib/css/monokai.css">
+    
+    <!-- Custom assignment styling -->
+    <link rel="stylesheet" href="../../css/assignment-style.css">
+    
+</head>
+
+<body>
+    <section class="content-section top-section">
+        <div class="container">
+            <br><br>
+            <h1>Group exercises - chapter 2</h1>
+            <p>
+                Mr. Gottsacker <br>
+                Computer Programming <br>
+            </p>
+            <hr>
+            <h3>
+                Electric vehicle cost calculator
+            </h3>
+            <p>
+                This project is designed for groups of two people. There will be one group of three.
+            </p>
+            <hr>
+            <h4>
+                Part 1: Gas-powered vehicle trip cost calculator
+            </h4>
+            <p>
+                Write a program called <code>GasPoweredTripCalculator.java</code> that collects the following information from the user about a gas-powered vehicle:
+                <ul>
+                    <li>miles per gallon</li>
+                    <li>price of gasoline per gallon</li>
+                    <li>driving distance of a trip in the vehicle, in miles</li>
+                </ul>
+                Compute the cost of driving that trip's distance, and output the result to the user.
+            </p>
+            <h4>
+                Part 2: Electric vehicle trip cost calculator
+            </h4>
+            <p>
+                Electric vehicles require a less straightforward method for computing the cost of one trip. Instead of miles per gallon, EVs have a mileage per battery charge. To arrive at cost per trip, this means you first have to figure out how much it costs to charge a battery, and then determine how much of the battery is spent on each trip. Each EV battery holds a number of kilowatt-hours (kWh). To calculate how much it costs to charge a battery, you can multiply the battery's kilowatt-hours capacity by the cost of a kilowatt-hour. Then, you can divide the result by the EV's mileage to determine how much it costs to drive the EV one mile.
+                <br><br>
+                <b>Note:</b> The cost of one kilowatt-hour is usually around $0.10 in the United States.
+                <br><br>
+                Write a program called <code>ElectricTripCalculator.java</code> that collects the following information from the user about an electric vehicle:
+                <ul>
+                    <li>range of vehicle</li>
+                    <li>kilowatt-hours capacity</li>
+                    <li>cost of one kilowatt-hour</li>
+                    <li>driving distance of a trip in the vehicle, in miles</li>
+                </ul>
+                Compute the cost of driving that trip's distance, and output the result to the user.
+            </p>
+            <h4>
+                Part 3: Analysis
+            </h4>
+            <p>
+                Suppose you are considering buying a new Rivian truck. With a fully charged 105 kWh battery, it can travel 230 miles. It costs $69,000. Use the Java programs you wrote to determine whether buying the Rivian is a good idea as a replacement for your gas-powered car. Compute the cost of a typical trip using each of the vehicles. Will the price of the Rivian ever pay for itself? In other words, will the savings from the Rivian on each trip eventually cover the price of the new vehicle? If so, after how many miles? After how many trips? You may write another Java program or simply use a calculator to compute how many trips it would take to cover the cost.
+                <br><br>
+                To complete this task, you should keep the following things in mind:
+                <ul>
+                    <li>"Your gas-powered car" can be any gas-powered car. It can be your car, your parents' car, or any car that you like. Find its average miles per gallon online.</li>
+                    <li>Use the price of gas at a local gas station in your gas-powered trip calculations.</li>
+                    <li>You will need to look online to find the average cost of electricity in Wisconsin.</li>
+                    <li>Use a consistent trip distance when running your different programs. Use a distance that you travel frequently, whether it is to school or to sports practice. If you and your family do not use a car, use the distance between your home and MUHS.</li>
+                </ul>
+            </p>
+            <h4>
+                Project report
+            </h4>
+            <p>
+                Put the details of your project in a report format. This report can be in a .txt file, Google Doc, or some other portable document format. Whenever you use the Internet to find information, include a link to the source of that information. Your report should contain the following information:
+                <ol>
+                    <li>Requirements specification</li>
+                    <ol type="a">
+                        <li>State the project's requirements for each part, as you understand them.</li>
+                    </ol>
+                    <li>System analysis</li>
+                    <ol type="a">
+                        <li>What are the system's inputs? Include information about your gas-powered car, the price of gas, the price of electricity, and the length of your trip.</li>
+                        <li>What are the system's outputs?</li>
+                        <li>What formulas will you use to obtain the outputs?</li>
+                    </ol>
+                    <li>System design</li>
+                    <ol type="a">
+                        <li>Describe the breakdown of subsystems. Which programs are being used to solve which problems?</li>
+                        <li>Describe your strategy and algorithm for reaching the conclusion desired in <b>Analysis</b>.</li>
+                    </ol>
+                    <li>Testing</li>
+                    <ol type="a">
+                        <li>How do you know the program works? Describe any test cases used for the first two programs. These can be simple, with input values that are easy to verify.</li>
+                    </ol>
+                    <li>Analysis results</li>
+                    <ol type="a">
+                        <li>Will the Rivian's all-electric design make up for its price?</li>
+                        <li>If so, how many miles will it take? How many trips?</li>
+                        <li>What limitations does your software have? Are there any other less tangible considerations you should take into account that could offset the price of the Rivian (e.g., environmental impact)?</li>
+                    </ol>
+                </ol>
+            </p>
+            <hr>
+            <h4>
+                Project submission
+            </h4>
+            <p>
+                Send me your <code>GasPoweredTripCalculator.java</code> file, <code>ElectricTripCalculator.java</code> file, and Project Report file in an email with a subject line of <b>Group Project 2</b>. Include all group members' names in the email.
+            </p>
+            <br><br><br>
+        </div>
+    </section>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    </body>
+    
+    </html>
