@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="Marquette University High School,MUHS,Programming,Java,Gottsacker,Matt,Matthew">
+    <meta name="author" content="Matt Gottsacker">
+    
+    <title>comp prog/ch-5-exercises</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"> -->
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../lib/reveal.js/lib/css/monokai.css">
+    
+    <!-- Custom assignment styling -->
+    <link rel="stylesheet" href="../../css/assignment-style.css">
+    
+</head>
+
+<body>
+    <section class="content-section top-section">
+        <div class="container">
+            <h1>Exercises - chapter 5</h1>
+            <p>
+                Mr. Gottsacker <br>
+                Computer Programming <br>
+            </p>
+            
+            <hr>
+
+            <h3>
+                5.101
+            </h3>
+            <p>
+                Write a program that prints out the following converstion table of light years to astronomical units (the distance from the Earth to the Sun). Note that one light year is 63241.077 astronomical units.
+            </p>
+            <pre><code class="hljs">
+Light years &#9; Astronomical Units
+1 &#9; &#9; 63241.08
+2 &#9; &#9; 126482.15
+3 &#9; &#9; 189723.23
+...
+9 &#9; &#9; 569169.69
+10 &#9; &#9; 632410.77
+            </code></pre>
+
+            <br>
+
+            <h3>
+                5.102
+            </h3>
+            <p>
+                Write a program that prints out the following conversion table of nautical miles to miles. Note that one nautical mile is 1.151078 miles.
+            </p>
+            <pre><code class="hljs">
+Nautical miles &#9; Miles 
+1 &#9; &#9; 1.151078
+5 &#9; &#9; 5.755390
+10 &#9; &#9; 11.510780
+15 &#9; &#9; 17.266170
+... 
+495 &#9; &#9; 569.783610
+500 &#9; &#9; 575.390000
+            </code></pre>
+
+            <br>
+
+            <h3>
+                5.103
+            </h3>
+            <p>
+                Write a program that prints out the winningest soccer team given a series of team names and their number of wins in the season. Prompt the user to enter the number of teams that are in the league. Then, collect each team's name and their number of wins in the season. Then, display the name of the team with the most wins.
+            </p>
+
+            <br>
+
+            <h3>
+                5.104
+            </h3>
+            <p>
+                Use a <code>while</code> loop to find the largest integer <code>n</code> such that <code>n^3</code> is less than 14,000.
+            </p>
+
+            <br>
+
+            <h3>
+                5.14 (from textbook)
+            </h3>
+
+            <br>
+
+            <h3>
+                5.16 (from textbook) <!-- maybe -->
+            </h3>
+
+            <br>
+
+            <h3>
+                5.23 (from textbook)
+            </h3>
+
+            <br>
+
+            <h3>
+                5.25 (from textbook)
+            </h3>
+
+            <br>
+
+            <h3>
+                5.27 (from textbook) <!-- maybe write better ex -->
+            </h3>
+
+            <br>
+
+            <h3>
+                5.30 (from textbook) - <b>very</b> similar to <code>Exercise_2_13</code>
+            </h3>
+
+            <br>
+
+            <h3>
+                5.33 (from textbook)
+            </h3>
+
+            <br>
+
+            <h3>
+                5.40 (from textbook)
+            </h3>
+
+            <br>
+
+            <h3>
+                5.41 (from textbook)
+            </h3>
+
+            <br>
+
+            <h3>
+                5.43 (from textbook)
+            </h3>
+
+            <br>
+
+            <h3>
+                5.46 (from textbook)
+            </h3>
+
+            <br>
+
+            <h3>
+                5.105
+            </h3>
+            <p>
+                Rewrite Exercise 4.102, taking advantage of loops. When the program is first run, prompt the user to enter the number of quizzes that they would like to take. Each quiz should generate two integers between 10 and 20, and prompt the user to answer the sum of them. After the last quiz, output the user's score to two decimal places.
+            </p>
+
+            <h3>
+                5.106
+            </h3>
+            <p>
+                Rewrite Exercise 4.103, taking advantage of looping. The user should enter a password with <b>any number of characters</b>. The password must contain at least one of the following:
+                <ul>
+                    <li>uppercase letter</li>
+                    <li>lowercase letter</li>
+                    <li>number</li>
+                    <li>special symbol (a secondary key from the top row of the keyboard that you get from pressing <code>Shift + [number]</code>)</li>
+                </ul>
+                Notify the user about whether the password meets the requirements, and improvements they can make.
+            </p>
+
+            <br>
+            
+            <h3>
+                5.107
+            </h3>
+            <p>
+                Rewrite Exercise 4.104, taking advantage of looping. Prompt the user to enter a password of <b>any length</b>. Transform the password to make it stronger. Specifically:
+                <ul>
+                    <li>Capitalize the second-last character if it is a letter.</li>
+                    <li>Replace all occurrences of the following characters with their leet speak alternatives.</li>
+                </ul>
+                <table class="table">
+                    <thead>
+                        <th>character</th>
+                        <th>leet</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>a or A</td>
+                            <td>@</td>
+                        </tr>
+                        <tr>
+                            <td>e or E</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>s or S</td>
+                            <td>$</td>
+                        </tr>
+                        <tr>
+                            <td>o or O</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+        </div>
+    </section>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    </body>
+    
+    </html>
