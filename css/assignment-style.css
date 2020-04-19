@@ -2,3 +2,8 @@
     font-weight: 700;
     color: chartreuse;
 }
+
+.timelineFrame {
+  width: 100%;
+  height: 35rem;
+}
